@@ -239,8 +239,8 @@ tinsert(addons, function()
 	local addon = Bagnon or Combuctor
 	if not addon then return true end
 
-	local CreateItemSlot = addon.ItemSlot.Create
-	function addon.ItemSlot:Create()
+	local CreateItemSlot = addon.Item.Construct
+	function addon.Item:Construct()
 		local button = CreateItemSlot(self)
 		hooksecurefunc(button, "Update", UpdateBagnonItemSlot)
 		return button
